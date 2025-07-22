@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset password</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#F6F6F9]">
+    <section class="container mx-auto mt-6">
+      <div class="flex items-center justify-between lg:flex-col">
+        <div class="w-[100px] h-[30px] order-1 lg:order-2 lg:mt-40">
+          <img src="./assets/grey (1).png" class="w-full h-full" />
+        </div>
+
+        <div
+          class="order-2 md:w-full lg:full lg:flex lg:justify-end lg:order-1"
+        >
+          <div
+            id="langToggle"
+            class="relative w-[150px] border border-gray-200 p-2 flex items-center justify-between rounded-lg cursor-pointer"
+          >
+            <span id="selectLang" class="text-[#333333]">English</span>
+            <i class="fa fa-angle-down text-gray-500" aria-hidden="true"></i>
+          </div>
+
+          <div
+            id="langDropDown"
+            class="hidden absolute mt-12 bg-white w-[150px] rounded-lg shadow-lg border border-gray-200"
+          >
+            <ul class="text-[#333333]">
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Filipino
+              </li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">French</li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Indonesian
+              </li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Portuguese
+              </li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Spanish
+              </li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Swahili
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto">
+      <div class="flex justify-center mt-8">
+        <div class="w-[500px] h-[240px] bg-white rounded-lg shadow-sm p-8">
+          <h1 class="text-xl text-extrabold">Reset your password</h1>
+
+          <div class="mt-4 space-y-2">
+            <label for="email" class="text-sm text-light">Email address</label>
+            <input
+              class="w-full border border-bg-gray-200 outline-none p-2 rounded-lg text-sm"
+              placeholder="Enter your email address to get a link to reset your password"
+            />
+          </div>
+
+          <div class="mt-4">
+            <button
+              class="bg-[#2467E3] w-full p-3 text-white rounded-lg text-sm"
+            >
+              Send password reset link
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center justify-center mt-4">
+        <p class="text-sm text-gray-400">
+          Remembered your password?
+          <a href="index.html" class="text-[#2467E3]">Login to your account</a>
+        </p>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>

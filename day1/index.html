@@ -1,0 +1,140 @@
+<!-- //fully functional login page// -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grey login page</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-[#F6F6F9]">
+    <section class="container mx-auto mt-6">
+      <div class="flex items-center justify-between lg:flex-col">
+        <div class="w-[100px] h-[30px] order-1 lg:order-2 lg:mt-20">
+          <img src="./assets/grey (1).png" class="w-full h-full" />
+        </div>
+
+        <div
+          class="order-2 md:w-full lg:full lg:flex lg:justify-end lg:order-1"
+        >
+          <div
+            id="langToggle"
+            class="relative w-[150px] border border-gray-200 p-2 flex items-center justify-between rounded-lg cursor-pointer"
+          >
+            <span id="selectLang" class="text-[#333333]">English</span>
+            <i class="fa fa-angle-down text-gray-500" aria-hidden="true"></i>
+          </div>
+
+          <div
+            id="langDropDown"
+            class="hidden absolute mt-12 bg-white w-[150px] rounded-lg shadow-lg border border-gray-200"
+          >
+            <ul class="text-[#333333]">
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Filipino
+              </li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">French</li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Indonesian
+              </li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Portuguese
+              </li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Spanish
+              </li>
+              <li class="px-2 py-3 cursor-pointer hover:bg-gray-200">
+                Swahili
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container mx-auto">
+      <div class="flex items-center justify-center mt-4">
+        <div class="w-[550px] h-[550px] bg-white rounded-lg shadow-lg p-6">
+          <h2 class="font-bold text-2xl tracking-[1px]">Welcome back!</h2>
+
+          <div
+            class="border border-gray-200 rounded-lg shadow-sm h-[50px] mt-6 p-2 flex items-center justify-center space-x-2 cursor-pointer"
+          >
+            <div class="w-[30px] h-[30px]">
+              <img
+                src="./assets/[CITYPNG.COM]Google Logo Icon Gsuite HD - 3000x3000.png"
+                class="w-full h-full"
+              />
+            </div>
+            <p class="text-sm">Sign in with Google</p>
+          </div>
+
+          <div class="mt-8 flex items-center justify-center space-x-2">
+            <div class="border border-gray-200 w-[180px]"></div>
+            <p class="text-sm text-gray-400">Or continue with</p>
+            <div class="border border-gray-200 w-[180px]"></div>
+          </div>
+
+          <div class="mt-8 space-y-2">
+            <div class="space-y-2">
+              <label for="Email" class="text-sm text-light"
+                >Email address</label
+              >
+              <input
+                id="email"
+                type="email"
+                placeholder="Enter your email address"
+                class="w-full border border-bg-gray-200 outline-none p-3 rounded-lg"
+              />
+              <p id="emailError" class="text-red-200 text-sm"></p>
+            </div>
+
+            <div class="space-y-2">
+              <label for="password" class="text-sm text-light">Password</label>
+              <div
+                class="w-full border border-bg-gray-200 p-3 rounded-lg flex items-center justify-between"
+              >
+                <input
+                  id="password"
+                  type="password"
+                  placeholder="Enter your password"
+                  class="outline-none"
+                />
+
+                <span id="togglePassword" class="cursor-pointer text-gray-500">
+                  <i class="far fa-eye"></i>
+                </span>
+              </div>
+              <p id="passwordError" class="text-sm text-red-200"></p>
+            </div>
+            <div>
+              <a href="trouble.html" class="text-[#2467E3] text-sm text-bold"
+                >Trouble signing in</a
+              >
+            </div>
+            <div
+              class="bg-[#2467E3] h-12 rounded-lg w-full flex items-center justify-center text-white"
+            >
+              <button id="logIn">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center mt-4">
+        <p class="text-sm text-gray-400">
+          Are you a new user?
+          <a href="" class="text-[#2467E3]">Create an account</a>
+        </p>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
