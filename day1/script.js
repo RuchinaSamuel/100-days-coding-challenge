@@ -54,7 +54,7 @@ logInBtn.addEventListener("click", function () {
   if (!password) {
     passwordError.textContent = "Password is required";
   } else if (!passwordRegax.test(password)) {
-    passwordError.textContent = "Please enter a valid password";
+    passwordError.textContent = "Password must be 2-8 characters, include uppercase, lowercase, number, and symbol";
     errorMessage = true;
   }
 
