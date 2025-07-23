@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atuma Stores</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-[#F4F4F4]">
+    <section>
+      <div
+        class="bg-[#304747] h-10 flex items-center justify-center overflow-hidden"
+      >
+        <div class="slide text-white text-sm">
+          * FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 &nbsp;&nbsp; *
+          FREE SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35 &nbsp;&nbsp; * FREE
+          SHIPPING ON ALL INTERNATIONAL ORDERS OVER $35
+        </div>
+      </div>
+    </section>
+    <section class="border-b border-gray-300 pb-4">
+      <nav class="container mx-auto mt-2">
+        <div class="p-4 md:p-0 flex items-center justify-between">
+          <div class="w-[150px] h-[80px]">
+            <img
+              src="./asset/Fashion_Brand_Art_Design_Logo-removebg-preview (1).png"
+              class="w-full h-full"
+            />
+          </div>
+
+          <div class="">
+            <ul class="hidden lg:flex items-center gap-6">
+              <li><a>Shop All</a></li>
+              <li><a>Best Sellers</a></li>
+              <li><a>Kids</a></li>
+              <li><a>About Us</a></li>
+            </ul>
+          </div>
+
+          <div class="">
+            <button
+              class="hidden lg:inline-block bg-[#304747] lg:text-white py-2 px-4 rounded-lg cursor-pointer"
+            >
+              Talk to Sales
+            </button>
+          </div>
+
+          <div class="lg:hidden relative">
+            <i
+              class="fa fa-bars text-[30px] cursor-pointer"
+              aria-hidden="true"
+            ></i>
+          </div>
+        </div>
+
+        <div
+          id="dropDownMenu"
+          class="absolute right-0 shadow-lg bg-[#F4F4F4] w-[200px] rounded-lg hidden z-50"
+        >
+          <div class="lg:hidden">
+            <div class=" ">
+              <ul class="space-y-4">
+                <li class="py-2 px-4 hover:bg-gray-200"><a>Shop All</a></li>
+                <li class="py-2 px-4 hover:bg-gray-200"><a>Best Sellers</a></li>
+                <li class="py-2 px-4 hover:bg-gray-200"><a>Kids</a></li>
+                <li class="py-2 px-4 hover:bg-gray-200"><a>About Us</a></li>
+              </ul>
+            </div>
+
+            <div class="py-2 px-4">
+              <button class="bg-[#304747] text-white py-2 px-4 rounded-lg">
+                Talk to Sales
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section class="mt-10">
+      <div class="container mx-auto">
+        <div
+          class="relative h-[700px] w-full rounded-lg bg-cover bg-center p-10 overflow-hidden"
+          style="background-image: url(./asset/shoes/shoe1b.webp)"
+        >
+          <div class="absolute inset-0 bg-black/40"></div>
+
+          <div class="relative flex items-center p-10">
+            <div class="max-w-2xl">
+              <h1 class="text-6xl text-white font-bold uppercase leading-tight">
+                walking with <br />
+                purpose.
+              </h1>
+              <p class="text-white italic text-lg">Atuma Stores.....</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- <section class="mt-20">
+      <div class="container mx-auto">
+        <h1 class="uppercase text-5xl text-extrabold Poppins mb-8">
+          our best seller
+        </h1>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div class="relative items-center justify-center">
+            <div class="space-x-10">
+              <button
+                class="absolute bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer inline-block"
+              >
+                <i class="fa fa-angle-left" aria-hidden="true"></i>
+              </button>
+              <button
+                class="absolute bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer inline-block"
+              >
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </button>
+            </div>
+
+            <div class="">
+              <img
+                src="./asset/shoes/shoe1b.webp"
+                class="w-full h-auto object-cover rounded-lg"
+              />
+            </div>
+
+            <div>
+              <p></p>
+            </div>
+          </div>
+
+          <div>
+            <img
+              src="./asset/shoe2.webp"
+              class="w-full h-auto object-cover rounded-lg"
+            />
+          </div>
+          <div>
+            <img
+              src="./asset/shoe3.webp"
+              class="w-full h-auto object-cover rounded-lg"
+            />
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+    <section class="mt-20">
+      <div class="p-4 md:p-0 container mx-auto">
+        <!-- Section Heading -->
+        <h1 class="uppercase text-5xl italic font-extrabold Poppins mb-8">
+          Our Best Seller
+        </h1>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Product 1 with Arrows -->
+          <div class="relative product">
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/shoes/shoe1a.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div></div>
+          </div>
+
+          <!-- Product 2 -->
+          <div class="relative product">
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe2.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+          </div>
+
+          <!-- Product 3 -->
+          <div class="relative product">
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe3.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+          </div>
+
+          <!-- .....product 4.......... -->
+          <div class="relative product">
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe4.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+          </div>
+
+          <!-- ............product5.............. -->
+          <div class="relative product">
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe5.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+          </div>
+
+          <!-- ..........product6.............. -->
+          <div class="relative product">
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe6.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+          </div>
+          <!-- .........product7................. -->
+          <div class="hidden relative product productDropDown">
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe7.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+          </div>
+
+          <!-- ............product 8................ -->
+          <div class="hidden relative product productDropDown">
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe8.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+          </div>
+
+          <!-- .........product 9...................... -->
+          <div class="hidden relative product productDropDown">
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe9.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+          </div>
+        </div>
+        <div class="flex items-center justify-center mt-6">
+          <button
+            id="viewMoreBtn"
+            class="bg-[#304747] text-white py-2 px-4 rounded-lg"
+          >
+            View More <i class="fa fa-angle-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      const icon = document.querySelector(".fa-bars");
+      const dropDownMenu = document.getElementById("dropDownMenu");
+
+      icon.addEventListener("click", () => {
+        dropDownMenu.classList.toggle("hidden");
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!dropDownMenu.contains(e.target) && !icon.contains(e.target)) {
+          dropDownMenu.classList.add("hidden");
+        }
+      });
+
+      const products = [
+        [
+          "./asset/shoes/shoe1a.webp",
+          "./asset/shoes/shoe1.webp",
+          "./asset/shoes/shoe1b.webp",
+          "./asset/shoes/shoe1c.webp",
+          "./asset/shoes/shoe1d.webp",
+        ],
+        [
+          "./asset/shoes/shoe2.webp",
+          "./asset/shoes/shoe2a.webp",
+          "./asset/shoes/shoe2b.webp",
+          "./asset/shoes/shoe2c.webp",
+          "./asset/shoes/shoe2d.webp",
+        ],
+
+        [
+          "./asset/shoes/shoe3.webp",
+          "./asset/shoes/shoe3a.webp",
+          "./asset/shoes/shoe3b.webp",
+          "./asset/shoes/shoe3c.webp",
+          "./asset/shoes/shoe3d.webp",
+        ],
+
+        [
+          "./asset/shoes/shoe4.webp",
+          "./asset/shoes/shoe4a.webp",
+          "./asset/shoes/shoe4b.webp",
+          "./asset/shoes/shoe4c.webp",
+          "./asset/shoes/shoe4d.webp",
+        ],
+        [
+          "./asset/shoes/shoe5.webp",
+          "./asset/shoes/shoe5a.webp",
+          "./asset/shoes/shoe5b.webp",
+          "./asset/shoes/shoe5c.webp",
+          "./asset/shoes/shoe5d.webp",
+        ],
+        [
+          "./asset/shoes/shoe6.webp",
+          "./asset/shoes/shoe6a.webp",
+          "./asset/shoes/shoe6b.webp",
+          "./asset/shoes/shoe6c.webp",
+          "./asset/shoes/shoe6d.webp",
+        ],
+        [
+          "./asset/shoes/shoe7.webp",
+          "./asset/shoes/shoe7a.webp",
+          "./asset/shoes/shoe7c.webp",
+          "./asset/shoes/shoe7d.webp",
+        ],
+        [
+          "./asset/shoes/shoe8.webp",
+          "./asset/shoes/shoe8a.webp",
+          "./asset/shoes/shoe8b.webp",
+          "./asset/shoes/shoe8c.webp",
+        ],
+        [
+          "./asset/shoes/shoe9.webp",
+          "./asset/shoes/shoe9a.webp",
+          "./asset/shoes/shoe9b.webp",
+          "./asset/shoes/shoe9c.webp",
+          "./asset/shoes/shoe9d.webp",
+        ],
+      ];
+
+      document.querySelectorAll(".product").forEach((productEl, index) => {
+        const imgEl = productEl.querySelector(".product-img");
+        const leftBtn = productEl.querySelector(".left-arrow");
+        const rightBtn = productEl.querySelector(".right-arrow");
+
+        let currentIndex = 0;
+
+        rightBtn.addEventListener("click", () => {
+          currentIndex = (currentIndex + 1) % products[index].length;
+          imgEl.src = products[index][currentIndex];
+        });
+
+        leftBtn.addEventListener("click", () => {
+          currentIndex =
+            (currentIndex - 1 + products[index].length) %
+            products[index].length;
+          imgEl.src = products[index][currentIndex];
+        });
+      });
+
+      const productDropDown = document.querySelectorAll(".productDropDown");
+      const viewMoreBtn = document.getElementById("viewMoreBtn");
+
+      viewMoreBtn.addEventListener("click", () => {
+        productDropDown.forEach((item) => {
+          item.classList.toggle("hidden");
+        });
+      });
+    </script>
+  </body>
+</html>

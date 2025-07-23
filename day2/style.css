@@ -1,0 +1,25 @@
+body {
+    font-family: "Poppins", sans-serif;
+  }
+
+
+.slide{
+    white-space: nowrap;
+    display: inline-block;
+    animation: slide 60s linear infinite;
+}
+
+@keyframes slide{
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+
+
+}
+
+.slide:hover{
+    animation-play-state: paused;
+}
