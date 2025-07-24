@@ -39,7 +39,7 @@
 
           <div class="">
             <ul class="hidden lg:flex items-center gap-6">
-              <li><a>Shop All</a></li>
+              <li><a href="shopAll.html">Shop All</a></li>
               <li><a>Best Sellers</a></li>
               <li><a>Kids</a></li>
               <li><a>About Us</a></li>
@@ -69,7 +69,9 @@
           <div class="lg:hidden">
             <div class=" ">
               <ul class="space-y-4">
-                <li class="py-2 px-4 hover:bg-gray-200"><a>Shop All</a></li>
+                <li class="py-2 px-4 hover:bg-gray-200">
+                  <a href="shopAll.html">Shop All</a>
+                </li>
                 <li class="py-2 px-4 hover:bg-gray-200"><a>Best Sellers</a></li>
                 <li class="py-2 px-4 hover:bg-gray-200"><a>Kids</a></li>
                 <li class="py-2 px-4 hover:bg-gray-200"><a>About Us</a></li>
@@ -119,9 +121,12 @@
         </h1>
 
         <!-- Product Grid -->
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <!-- Product 1 with Arrows -->
-          <div class="relative product">
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
             <!-- Image -->
             <img
               id=""
@@ -143,11 +148,170 @@
               <i class="fa fa-angle-right text-xl"></i>
             </button>
 
-            <div></div>
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 1 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product1"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe1a.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe1.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe1c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe1d.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men'S Classic Low Top Oxfords, Solid Color Casual Fashion
+                    Shoes, All-Season Lace-Up Loafers with Rubber Sole, Upper &
+                    Inner, Round Toe - Insole
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N58,837</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N132,468</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-55%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- Product 2 -->
-          <div class="relative product">
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product2"
+          >
             <!-- Image -->
             <img
               src="./asset/shoes/shoe2.webp"
@@ -167,10 +331,171 @@
             >
               <i class="fa fa-angle-right text-xl"></i>
             </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product2"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
           </div>
 
+          <!-- .........add to cart pop up product 2-->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product2"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe2.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe2a.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe2b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe2c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men'S Glossy Black Derby Shoes with Thick Rubber Sole -
+                    Height-Boosting Wedding & Business Oxfords, Lace-Up Dress
+                    Shoes for Formal & Casual Occasions, Wedding Shoes, Stylish
+                    Laceup, Durable Footwear
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N58,837</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N132,468</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-55%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- Product 3 -->
-          <div class="relative product">
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product3"
+          >
             <!-- Image -->
             <img
               src="./asset/shoes/shoe3.webp"
@@ -190,10 +515,173 @@
             >
               <i class="fa fa-angle-right text-xl"></i>
             </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product3"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 3 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product3"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe3.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe3a.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe3b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe3c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                    Non-Slip Rubber Sole, Cushioned EVA Insole - Professional &
+                    Everyday Footwear for Office, Events, Casual Attire -
+                    Durable Upper, Event Ready Footwear, Sleek Shoe Design
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- .....product 4.......... -->
-          <div class="relative product">
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product4"
+          >
             <!-- Image -->
             <img
               src="./asset/shoes/shoe4.webp"
@@ -213,10 +701,173 @@
             >
               <i class="fa fa-angle-right text-xl"></i>
             </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product4"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 4 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product4"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe4.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe4a.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe4b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe4c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                    Non-Slip Rubber Sole, Cushioned EVA Insole - Professional &
+                    Everyday Footwear for Office, Events, Casual Attire -
+                    Durable Upper, Event Ready Footwear, Sleek Shoe Design
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- ............product5.............. -->
-          <div class="relative product">
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product5"
+          >
             <!-- Image -->
             <img
               src="./asset/shoes/shoe5.webp"
@@ -236,10 +887,172 @@
             >
               <i class="fa fa-angle-right text-xl"></i>
             </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product5"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
           </div>
 
+          <!-- .........add to cart pop up product 5 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product5"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe5.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe5a.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe5b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe5c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                    Non-Slip Rubber Sole, Cushioned EVA Insole - Professional &
+                    Everyday Footwear for Office, Events, Casual Attire -
+                    Durable Upper, Event Ready Footwear, Sleek Shoe Design
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- ..........product6.............. -->
-          <div class="relative product">
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product6"
+          >
             <!-- Image -->
             <img
               src="./asset/shoes/shoe6.webp"
@@ -259,9 +1072,172 @@
             >
               <i class="fa fa-angle-right text-xl"></i>
             </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product6"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 6 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product6"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe6.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe6a.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe6b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe6c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                    Non-Slip Rubber Sole, Cushioned EVA Insole - Professional &
+                    Everyday Footwear for Office, Events, Casual Attire -
+                    Durable Upper, Event Ready Footwear, Sleek Shoe Design
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <!-- .........product7................. -->
-          <div class="hidden relative product productDropDown">
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product7"
+          >
             <!-- Image -->
             <img
               src="./asset/shoes/shoe7.webp"
@@ -281,10 +1257,173 @@
             >
               <i class="fa fa-angle-right text-xl"></i>
             </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product7"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 7 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product7"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe7.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe7a.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe7c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe7d.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                    Non-Slip Rubber Sole, Cushioned EVA Insole - Professional &
+                    Everyday Footwear for Office, Events, Casual Attire -
+                    Durable Upper, Event Ready Footwear, Sleek Shoe Design
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- ............product 8................ -->
-          <div class="hidden relative product productDropDown">
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product8"
+          >
             <!-- Image -->
             <img
               src="./asset/shoes/shoe8.webp"
@@ -304,10 +1443,171 @@
             >
               <i class="fa fa-angle-right text-xl"></i>
             </button>
-          </div>
 
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product8"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+          <!-- .........add to cart pop up product 8 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product8"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe8.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe8a.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe8b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe8c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                    Non-Slip Rubber Sole, Cushioned EVA Insole - Professional &
+                    Everyday Footwear for Office, Events, Casual Attire -
+                    Durable Upper, Event Ready Footwear, Sleek Shoe Design
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
           <!-- .........product 9...................... -->
-          <div class="hidden relative product productDropDown">
+          <div
+            class="hidden cursor-pointer relative product hover:shadow-lg rounded-lg pb-10 productDropDown"
+            data-id="product9"
+          >
             <!-- Image -->
             <img
               src="./asset/shoes/shoe9.webp"
@@ -327,8 +1627,730 @@
             >
               <i class="fa fa-angle-right text-xl"></i>
             </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product9"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 9 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product9"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe9a.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe9.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe9b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe9c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                    Non-Slip Rubber Sole, Cushioned EVA Insole - Professional &
+                    Everyday Footwear for Office, Events, Casual Attire -
+                    Durable Upper, Event Ready Footwear, Sleek Shoe Design
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- .................product 10------------- -->
+          <div
+            class="hidden cursor-pointer relative product hover:shadow-lg rounded-lg pb-10 productDropDown"
+            data-id="product10"
+          >
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe10.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product10"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-black">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 10 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product10"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe10a.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe10.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe10b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe10c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men'S Korean Style Slip-On Loafers with Metal Buckle,
+                    Breathable Rubber Sole, Round Toe, Low-Top Design - White
+                    Faux Cover Casual & Business Casual Shoes for All Seasons,
+                    Office & Streetwear, Allseason Footwear, Minimalist Fashion,
+                    Durable Traction Footwear
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ...........product 11.................. -->
+          <div
+            class="hidden cursor-pointer relative product hover:shadow-lg rounded-lg pb-10 productDropDown"
+            data-id="product11"
+          >
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe11.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product11"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 11 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product11"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe11e.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe11b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe11c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe11d.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men'S Korean Style Slip-On Loafers with Metal Buckle,
+                    Breathable Rubber Sole, Round Toe, Low-Top Design - White
+                    Faux Cover Casual & Business Casual Shoes for All Seasons,
+                    Office & Streetwear, Allseason Footwear, Minimalist Fashion,
+                    Durable Traction Footwear
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ...............product12..................... -->
+          <div
+            class="hidden cursor-pointer relative product hover:shadow-lg rounded-lg pb-10 productDropDown"
+            data-id="product12"
+          >
+            <!-- Image -->
+            <img
+              src="./asset/shoes/shoe12.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="right-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="left-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Lace-Up Formal & Casual Shoes - Classic Brown,
+                Non..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N77,517</span
+                >
+                <span class="line-through text-gray-500 text-sm">N130,883</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product12"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........add to cart pop up product 12 -->
+          <div
+            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            data-id="product12"
+          >
+            <div
+              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            >
+              <button
+                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
+              >
+                <i class="fa fa-times"></i>
+              </button>
+              <div class="flex flex-col md:flex-row gap-6">
+                <div class="w-full md:w-1/2 flex flex-col items-center">
+                  <div class="relative w-[350px]">
+                    <img
+                      id=""
+                      src="./asset/shoes/shoe12e.webp"
+                      class="product-img w-full h-auto object-cover rounded-lg"
+                    />
+                  </div>
+
+                  <div class="mt-2 flex items-center gap-4">
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe12b.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe12c.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                    <div class="h-16 w-16 hover:border-2 border-black">
+                      <img
+                        src="./asset/shoes/shoe12d.webp"
+                        class="w-full h-full"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="w-full md:w-1/2">
+                  <p>
+                    Men's Formal & Casual Shoes - Brown Business Dress Shoes
+                    with Lace-Up Closure, Non-Slip Rubber Sole - PU Upper for
+                    Office, Weddings, Everyday - All-Season (Fall/Winter)
+                    Professional Footwear, Shoes for Wedding, Office Footwear,
+                    Sleek Design, Sturdy Build, Corporate Wear, Classic Style,
+                    Comfortable Fit, Corporate Attire
+                  </p>
+                  <div class="text-gray-500 mt-2 space-x-1">
+                    <span>376 sold </span>
+                    <spaan class="border border-gray-300"></spaan>
+                    <span>Sold by</span>
+                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
+                  </div>
+                  <div class="mt-4">
+                    <span class="font-semibold text-2xl hover:text-red-500"
+                      >N77,517</span
+                    >
+                    <span class="line-through text-gray-500 text-lg"
+                      >N130,883</span
+                    >
+                    <span
+                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
+                      >-40%</span
+                    >
+                  </div>
+                  <p class="mt-2">Color: Black</p>
+                  <div class="mt-2 mb-8">
+                    <p class="mb-4">Size(UK):</p>
+                    <div class="flex flex-wrap gap-2">
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        5.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        6.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        7.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        8.5
+                      </button>
+                      <button
+                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
+                      >
+                        10
+                      </button>
+                      <br />
+                      <button
+                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
+                      >
+                        10.5
+                      </button>
+                    </div>
+                  </div>
+
+                  <div
+                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
+                  >
+                    <button class="w-full">Place your order</button>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
+
+        <!-- .........view more btn.................. -->
         <div class="flex items-center justify-center mt-6">
           <button
             id="viewMoreBtn"
@@ -340,114 +2362,80 @@
       </div>
     </section>
 
-    <script>
-      const icon = document.querySelector(".fa-bars");
-      const dropDownMenu = document.getElementById("dropDownMenu");
+    <section class="mt-20">
+      <footer class="container mx-auto">
+        <div
+          class="p-8 space-y-4 md:0 flex flex-col md:items-start md:justify-between md:flex-row gap-8"
+        >
+          <div class="md:w-1/5">
+            <h2 class="text-2xl uppercase">Shop</h2>
+            <ul class="text-lg leading-[40px] text-gray-500 mt-2">
+              <li class=""><a>All Products</a></li>
+              <li><a>Best Seller</a></li>
+              <li><a>Kids</a></li>
+              <li><a>About Us</a></li>
+            </ul>
+          </div>
 
-      icon.addEventListener("click", () => {
-        dropDownMenu.classList.toggle("hidden");
-      });
+          <div class="md:w-1/5">
+            <h2 class="text-2xl uppercase">Policies</h2>
+            <ul class="text-lg leading-[40px] text-gray-500 mt-2">
+              <li class=""><a>Terms & Conditions</a></li>
+              <li><a>Privacy Policy</a></li>
+              <li><a>Shipping Policy</a></li>
+              <li><a>Accessibility Statement</a></li>
+            </ul>
+          </div>
 
-      document.addEventListener("click", (e) => {
-        if (!dropDownMenu.contains(e.target) && !icon.contains(e.target)) {
-          dropDownMenu.classList.add("hidden");
-        }
-      });
+          <div class="md:w-1/5">
+            <h2 class="text-2xl uppercase">contact</h2>
+            <p class="text-gray-500">Port Hacourt, Nigeria</p>
+          </div>
 
-      const products = [
-        [
-          "./asset/shoes/shoe1a.webp",
-          "./asset/shoes/shoe1.webp",
-          "./asset/shoes/shoe1b.webp",
-          "./asset/shoes/shoe1c.webp",
-          "./asset/shoes/shoe1d.webp",
-        ],
-        [
-          "./asset/shoes/shoe2.webp",
-          "./asset/shoes/shoe2a.webp",
-          "./asset/shoes/shoe2b.webp",
-          "./asset/shoes/shoe2c.webp",
-          "./asset/shoes/shoe2d.webp",
-        ],
+          <div class="md:w-1/5">
+            <h2 class="text-2xl uppercase">socials</h2>
+            <ul class="text-lg leading-[40px] text-gray-500 mt-2">
+              <li class=""><a>Instagram</a></li>
+              <li><a>Facebook</a></li>
+              <li><a>Twitter</a></li>
+              <li><a>Tik Tok</a></li>
+            </ul>
+          </div>
 
-        [
-          "./asset/shoes/shoe3.webp",
-          "./asset/shoes/shoe3a.webp",
-          "./asset/shoes/shoe3b.webp",
-          "./asset/shoes/shoe3c.webp",
-          "./asset/shoes/shoe3d.webp",
-        ],
+          <div class="md:w-1/5">
+            <h2 class="text-2xl uppercase">stay in the loop</h2>
+            <p class="mt-1 text-gray-500">
+              stay in the loop to receive updates and specail offers
+            </p>
 
-        [
-          "./asset/shoes/shoe4.webp",
-          "./asset/shoes/shoe4a.webp",
-          "./asset/shoes/shoe4b.webp",
-          "./asset/shoes/shoe4c.webp",
-          "./asset/shoes/shoe4d.webp",
-        ],
-        [
-          "./asset/shoes/shoe5.webp",
-          "./asset/shoes/shoe5a.webp",
-          "./asset/shoes/shoe5b.webp",
-          "./asset/shoes/shoe5c.webp",
-          "./asset/shoes/shoe5d.webp",
-        ],
-        [
-          "./asset/shoes/shoe6.webp",
-          "./asset/shoes/shoe6a.webp",
-          "./asset/shoes/shoe6b.webp",
-          "./asset/shoes/shoe6c.webp",
-          "./asset/shoes/shoe6d.webp",
-        ],
-        [
-          "./asset/shoes/shoe7.webp",
-          "./asset/shoes/shoe7a.webp",
-          "./asset/shoes/shoe7c.webp",
-          "./asset/shoes/shoe7d.webp",
-        ],
-        [
-          "./asset/shoes/shoe8.webp",
-          "./asset/shoes/shoe8a.webp",
-          "./asset/shoes/shoe8b.webp",
-          "./asset/shoes/shoe8c.webp",
-        ],
-        [
-          "./asset/shoes/shoe9.webp",
-          "./asset/shoes/shoe9a.webp",
-          "./asset/shoes/shoe9b.webp",
-          "./asset/shoes/shoe9c.webp",
-          "./asset/shoes/shoe9d.webp",
-        ],
-      ];
+            <div class="mt-4 space-y-2">
+              <label class="text-gray-500">Email Address</label>
+              <input
+                type="email"
+                class="w-full border border-gray-300 outline-none bg-transparent p-2 rounded-lg"
+              />
+            </div>
 
-      document.querySelectorAll(".product").forEach((productEl, index) => {
-        const imgEl = productEl.querySelector(".product-img");
-        const leftBtn = productEl.querySelector(".left-arrow");
-        const rightBtn = productEl.querySelector(".right-arrow");
+            <div class="mt-4 flex items-center gap-2">
+              <div class="h-6 w-6 border-2 border-black"></div>
+              <p>Yes, subscribe me to your newsletter</p>
+            </div>
+          </div>
+        </div>
 
-        let currentIndex = 0;
+        <div class="w-[200px] h-[100px]">
+          <img
+            src="./asset/Fashion_Brand_Art_Design_Logo-removebg-preview (1).png"
+          />
+        </div>
+      </footer>
+      <div
+        class="border-t border-gray-300 mt-6 flex items-center justify-center"
+      >
+        <span class="p-2"> @RuchinaSamii</span>
+      </div>
+    </section>
 
-        rightBtn.addEventListener("click", () => {
-          currentIndex = (currentIndex + 1) % products[index].length;
-          imgEl.src = products[index][currentIndex];
-        });
-
-        leftBtn.addEventListener("click", () => {
-          currentIndex =
-            (currentIndex - 1 + products[index].length) %
-            products[index].length;
-          imgEl.src = products[index][currentIndex];
-        });
-      });
-
-      const productDropDown = document.querySelectorAll(".productDropDown");
-      const viewMoreBtn = document.getElementById("viewMoreBtn");
-
-      viewMoreBtn.addEventListener("click", () => {
-        productDropDown.forEach((item) => {
-          item.classList.toggle("hidden");
-        });
-      });
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
