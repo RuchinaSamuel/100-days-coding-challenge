@@ -15,7 +15,7 @@
     />
   </head>
   <body>
-    <section class="border border-gray-300">
+    <section class="border-b border-gray-300 mt-4">
       <div class="container mx-auto">
         <div class="flex items-center">
           <div class="flex">
@@ -74,7 +74,9 @@
 
     <section class="mt-4">
       <div class="container mx-auto">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+        <div
+          class="p-8 md:0 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
+        >
           <div
             class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
             data-id="product1"
@@ -82,7 +84,7 @@
             <!-- Image -->
             <img
               id=""
-              src="./asset/shoes/shoe1a.webp"
+              src="./asset/casual/shoe1.webp"
               class="product-img w-full h-auto object-cover rounded-lg"
             />
 
@@ -127,141 +129,1014 @@
             </div>
           </div>
 
-          <!-- .........add to cart pop up product 1 -->
+          <!-- ........product2 -->
           <div
-            class="cartContainer items-center justify-center fixed flex inset-0 bg-black/50 z-50 hidden"
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
             data-id="product1"
           >
-            <div
-              class="relative w-full md:w-[90%] lg:w-[1000px] h-auto max-h-[90vh] bg-white rounded-lg shadow-lg p-4 md:p-8 overflow-y-auto"
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe2b.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
             >
-              <button
-                class="closeModalBtn absolute top-2 right-2 text-gray-500 hover:text-black"
-              >
-                <i class="fa fa-times"></i>
-              </button>
-              <div class="flex flex-col md:flex-row gap-6">
-                <div class="w-full md:w-1/2 flex flex-col items-center">
-                  <div class="relative w-[350px]">
-                    <img
-                      id=""
-                      src="./asset/shoes/shoe1a.webp"
-                      class="product-img w-full h-auto object-cover rounded-lg"
-                    />
-                  </div>
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
 
-                  <div class="mt-2 flex items-center gap-4">
-                    <div class="h-16 w-16 hover:border-2 border-black">
-                      <img
-                        src="./asset/shoes/shoe1.webp"
-                        class="w-full h-full"
-                      />
-                    </div>
-                    <div class="h-16 w-16 hover:border-2 border-black">
-                      <img
-                        src="./asset/shoes/shoe1c.webp"
-                        class="w-full h-full"
-                      />
-                    </div>
-                    <div class="h-16 w-16 hover:border-2 border-black">
-                      <img
-                        src="./asset/shoes/shoe1d.webp"
-                        class="w-full h-full"
-                      />
-                    </div>
-                  </div>
-                </div>
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
 
-                <div class="w-full md:w-1/2">
-                  <p>
-                    Men'S Classic Low Top Oxfords, Solid Color Casual Fashion
-                    Shoes, All-Season Lace-Up Loafers with Rubber Sole, Upper &
-                    Inner, Round Toe - Insole
-                  </p>
-                  <div class="text-gray-500 mt-2 space-x-1">
-                    <span>376 sold </span>
-                    <spaan class="border border-gray-300"></spaan>
-                    <span>Sold by</span>
-                    <span><i class="fa fa-globe" aria-hidden="true"></i></span>
-                  </div>
-                  <div class="mt-4">
-                    <span class="font-semibold text-2xl hover:text-red-500"
-                      >N58,837</span
-                    >
-                    <span class="line-through text-gray-500 text-lg"
-                      >N132,468</span
-                    >
-                    <span
-                      class="border border-[#FB7700] p-1 text-[#FB7700] text-sm"
-                      >-55%</span
-                    >
-                  </div>
-                  <p class="mt-2">Color: Black</p>
-                  <div class="mt-2 mb-8">
-                    <p class="mb-4">Size(UK):</p>
-                    <div class="flex flex-wrap gap-2">
-                      <button
-                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
-                      >
-                        5
-                      </button>
-                      <button
-                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
-                      >
-                        5.5
-                      </button>
-                      <button
-                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
-                      >
-                        6.5
-                      </button>
-                      <button
-                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
-                      >
-                        7
-                      </button>
-                      <button
-                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
-                      >
-                        7.5
-                      </button>
-                      <button
-                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
-                      >
-                        8
-                      </button>
-                      <button
-                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
-                      >
-                        8.5
-                      </button>
-                      <button
-                        class="size-btn border rounded-2xl px-4 py-1 text-sm hover:bg-gray-200"
-                      >
-                        10
-                      </button>
-                      <br />
-                      <button
-                        class="size-btn border border-dotted border-gray-300 rounded-2xl px-4 py-1 text-sm hover:bg-gray-200 text-gray-300"
-                      >
-                        10.5
-                      </button>
-                    </div>
-                  </div>
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
 
-                  <div
-                    class="bg-[#304747] text-white flex items-center justify-center rounded-lg h-12"
-                  >
-                    <button class="w-full">Place your order</button>
-                  </div>
-                </div>
+          <!-- .........product3 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe3.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ........product 4 -->
+
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe4.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .......product5 -->
+
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe5.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ...product6 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe6.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ........product7 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe7.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ..........product8 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe8.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .......product9 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe9.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ........product10 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe10.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .......product11 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe11.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ........product12 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe12.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ..........product13 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe13.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ........product14 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe14.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ......product15 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe15a.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+          <!-- ........product16 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe16.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .........product 17 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe17a.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- ....................product 18 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe18.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+          <!-- ..........product19 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe19.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </div>
+
+          <!-- .......product20 -->
+          <div
+            class="cursor-pointer relative product hover:shadow-lg rounded-lg pb-10"
+            data-id="product1"
+          >
+            <!-- Image -->
+            <img
+              id=""
+              src="./asset/casual/shoe20.webp"
+              class="product-img w-full h-auto object-cover rounded-lg"
+            />
+
+            <!-- Left Arrow -->
+            <button
+              class="left-arrow absolute left-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-left text-xl"></i>
+            </button>
+
+            <!-- Right Arrow -->
+            <button
+              class="right-arrow absolute right-4 top-1/2 -translate-y-1/2 bg-white/70 hover:bg-white p-2 rounded-full shadow cursor-pointer"
+            >
+              <i class="fa fa-angle-right text-xl"></i>
+            </button>
+
+            <div class="p-3">
+              <p class="text-[#777777]">
+                Men's Classic Low Top Oxfords,..........
+              </p>
+              <div class="space-x-2">
+                <span class="font-bold text-lg hover:text-red-500"
+                  >N58,837</span
+                >
+                <span class="line-through text-gray-500 text-sm">N132,468</span>
+                <span class="text-sm text-gray-500">376 sold</span>
+                <button
+                  class="shoppingCart bg-white p-3 rounded-full shadow hover:bg-gray-100 transform transition-transform duration-300 hover:scale-110"
+                  data-id="product1"
+                >
+                  <i class="fa fa-shopping-cart text-gray-700"></i>
+                </button>
+              </div>
+              <div class="text-red-500">
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
+                <span><i class="fa fa-star" aria-hidden="true"></i></span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <script src="/js/script.js"></script>
   </body>
 </html>
