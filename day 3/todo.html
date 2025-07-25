@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <div class="mt-40 flex items-center justify-center">
+      <div class="bg-gray-200 shadow-lg h-[300px] w-[700px] p-6">
+        <h1 class="uppercase text-bold">todo app</h1>
+
+        <div class="flex mt-6">
+          <input
+            id="inputId"
+            placeholder="Add a new todo"
+            class="outline-none bg-transparent w-full border border-gray-300 flex-grow p-2 rounded-l"
+          />
+          <button id="addBtn" class="bg-green-500 px-4 rounded-r text-white">
+            Add
+          </button>
+        </div>
+        <div class="flex items-center justify-between mt-6">
+          <button
+            class="filterBtn border border-gray-300 px-3 py-1 rounded-lg hover:bg-gray-300"
+          >
+            All
+          </button>
+          <button
+            class="filterBtn border border-gray-300 px-3 py-1 rounded-lg hover:bg-gray-300"
+          >
+            Completed
+          </button>
+          <button
+            class="filterBtn border border-gray-300 px-3 py-1 rounded-lg hover:bg-gray-300"
+          >
+            Pending
+          </button>
+        </div>
+
+        <ul id="todoList"></ul>
+      </div>
+    </div>
+
+    <script>
+      const inputId = document.getElementById("inputId");
+      const addBtn = document.getElementById("addBtn");
+      const todoList = document.getElementById("todoList");
+      const filterBtn = document.querySelectorAll(".filterBtn");
+
+      let list = JSON.parse(localStorage.getItem("myTodos")) || [];
+      let currentTodo = "AllTodo";
+
+      function storedTodo() {
+        localStorage.getItem("myList", JSON.stringify(list));
+      }
+    </script>
+  </body>
+</html>

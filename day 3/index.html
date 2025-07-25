@@ -3,7 +3,172 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>Todo App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body></body>
+  <body class="bg-gray-100 font-[Poppins] p-6">
+    <div class="max-w-xl mx-auto bg-white rounded-lg shadow p-6">
+      <h1 class="text-2xl font-bold mb-4">Todo App</h1>
+
+      <!-- Input Field -->
+      <div class="flex mb-4">
+        <input
+          id="todoInput"
+          type="text"
+          placeholder="Add a new todo..."
+          class="flex-grow border border-gray-300 p-2 rounded-l focus:outline-none"
+        />
+        <button
+          id="addBtn"
+          class="bg-[#304747] text-white px-4 py-2 rounded-r hover:bg-[#1f2e2e]"
+        >
+          Add
+        </button>
+      </div>
+
+      <!-- Filters -->
+      <div class="flex justify-between mb-4">
+        <button
+          data-filter="all"
+          class="filter-btn px-3 py-1 border rounded bg-gray-200"
+        >
+          All
+        </button>
+        <button
+          data-filter="completed"
+          class="filter-btn px-3 py-1 border rounded"
+        >
+          Completed
+        </button>
+        <button
+          data-filter="pending"
+          class="filter-btn px-3 py-1 border rounded"
+        >
+          Pending
+        </button>
+      </div>
+
+      <!-- Todo List -->
+      <ul id="todoList" class="space-y-2"></ul>
+    </div>
+
+    <script>
+      const todoInput = document.getElementById("todoInput");
+      const addBtn = document.getElementById("addBtn");
+      const todoList = document.getElementById("todoList");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+
+      // Load from localStorage
+      let todos = JSON.parse(localStorage.getItem("todos")) || [];
+      let currentFilter = "all";
+
+      function saveTodos() {
+        localStorage.setItem("todos", JSON.stringify(todos));
+      }
+
+      // Render Todos
+      function renderTodos() {
+        todoList.innerHTML = "";
+
+        const filtered = todos.filter((todo) => {
+          if (currentFilter === "completed") return todo.completed;
+          if (currentFilter === "pending") return !todo.completed;
+          return true;
+        });
+
+        filtered.forEach((todo, index) => {
+          const li = document.createElement("li");
+          li.className =
+            "flex justify-between items-center bg-gray-100 p-2 rounded";
+
+          li.innerHTML = `
+          <div class="flex items-center gap-2">
+            <input type="checkbox" ${todo.completed ? "checked" : ""}
+              onchange="toggleComplete(${index})"/>
+            <span ondblclick="startEdit(${index}, this)"
+              class="${todo.completed ? "line-through text-gray-500" : ""}">
+              ${todo.text}
+            </span>
+          </div>
+          <button onclick="deleteTodo(${index})" class="text-red-500 hover:text-red-700">Delete</button>
+        `;
+
+          todoList.appendChild(li);
+        });
+      }
+
+      // Add Todo
+      addBtn.addEventListener("click", () => {
+        const text = todoInput.value.trim();
+        if (!text) return;
+
+        todos.push({ text, completed: false });
+        todoInput.value = "";
+        saveTodos();
+        renderTodos();
+      });
+
+      // Add with Enter key
+      todoInput.addEventListener("keydown", (e) => {
+        if (e.key === "Enter") addBtn.click();
+      });
+
+      // Toggle Complete
+      function toggleComplete(index) {
+        todos[index].completed = !todos[index].completed;
+        saveTodos();
+        renderTodos();
+      }
+
+      // Delete Todo
+      function deleteTodo(index) {
+        todos.splice(index, 1);
+        saveTodos();
+        renderTodos();
+      }
+
+      // Edit Todo (inline)
+      function startEdit(index, span) {
+        const input = document.createElement("input");
+        input.type = "text";
+        input.value = todos[index].text;
+        input.className = "border p-1 rounded w-full";
+
+        // Replace span with input
+        span.replaceWith(input);
+        input.focus();
+
+        // Save on Enter or blur
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") finishEdit(index, input);
+        });
+        input.addEventListener("blur", () => finishEdit(index, input));
+      }
+
+      function finishEdit(index, input) {
+        todos[index].text = input.value.trim() || todos[index].text;
+        saveTodos();
+        renderTodos();
+      }
+
+      // Filter buttons
+      filterButtons.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          currentFilter = btn.dataset.filter;
+
+          filterButtons.forEach((b) => b.classList.remove("bg-gray-200"));
+          btn.classList.add("bg-gray-200");
+
+          renderTodos();
+        });
+      });
+
+      // Make functions available globally
+      window.toggleComplete = toggleComplete;
+      window.deleteTodo = deleteTodo;
+      window.startEdit = startEdit;
+
+      renderTodos();
+    </script>
+  </body>
 </html>
